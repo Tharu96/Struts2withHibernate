@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <package name="default" extends="struts-default">
+        <action name="login">
+            <result>views/login.jsp</result>
+        </action>
+        <action name="loginprocess" class="com.jcg.struts2.jsp.LoginAction" method="execute">
+            <result name="success">views/welcomeUser.jsp</result>
+            <result name="error">views/loginerror.jsp</result>
+        </action>
+        <action name="logout" class="com.jcg.struts2.jsp.LoginAction" method="logout">
+            <result name="success">views/logoutsuccess.jsp</result>
+        </action>
+        <action name="manage_users" class="com.jcg.struts2.jsp.GetAllUsersAction">
+            <result name="success">views/manageUsers.jsp</result>
+            <result name="error">views/profilerror.jsp</result>
+        </action>
+        <action name="user_admin" >
+            <result>views/addNewUser.jsp</result>
+        </action>
+        <action name="save_user" class="com.jcg.struts2.jsp.UserAction" method="saveUser" >
+          <result name="success">views/addNewUser.jsp</result>
+        </action>
+        <action name="loadEditUserDetails" class="com.jcg.struts2.jsp.UserAction" method="viewUserDetails" >
+            <result name="success">views/editUserDetails.jsp</result>
+        </action>
+    </package>
+</struts>

@@ -1,0 +1,6 @@
+com\jcg\struts2\jsp\LoginAction.class
+com\jcg\struts2\jsp\ProfileAction.class
+com\jcg\struts2\jsp\User.class
+com\jcg\struts2\jsp\UserDao.class
+com\jcg\struts2\jsp\LoginDao.class
+com\jcg\struts2\jsp\UserAction.class
