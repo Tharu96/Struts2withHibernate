@@ -11,7 +11,7 @@
 
 <h3>Welcome, <s:property value="username"/></h3>
 
-<h4>User Details:</h4>
+<h4>Admin Details:</h4>
 
 <fieldset>
     <h5>User ID : <s:property value="user.user_id"/></h5><br/>
@@ -20,4 +20,7 @@
     <h5>Password : <s:property value="user.password"/></h5><br/>
 
 </fieldset>
+
+<a href="user_admin">User Admin</a>|
+
 

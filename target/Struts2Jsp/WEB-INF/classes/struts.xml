@@ -6,16 +6,16 @@
         <action name="login">
             <result>views/login.jsp</result>
         </action>
-        <action name="loginprocess" class="com.jcg.struts2.jsp.LoginAction" method="execute">
+        <action name="login_process" class="com.jcg.struts2.jsp.LoginAction" method="execute">
             <result name="success">views/welcomeUser.jsp</result>
-            <result name="error">views/loginerror.jsp</result>
+            <result name="error">views/loginError.jsp</result>
         </action>
         <action name="logout" class="com.jcg.struts2.jsp.LoginAction" method="logout">
-            <result name="success">views/logoutsuccess.jsp</result>
+            <result name="success">views/login.jsp</result>
         </action>
-        <action name="manage_users" class="com.jcg.struts2.jsp.GetAllUsersAction">
+        <action name="manage_users" class="com.jcg.struts2.jsp.UserAction" method="getAllUsers">
             <result name="success">views/manageUsers.jsp</result>
-            <result name="error">views/profilerror.jsp</result>
+            <result name="error">views/profileError.jsp</result>
         </action>
         <action name="user_admin" >
             <result>views/addNewUser.jsp</result>
@@ -23,8 +23,15 @@
         <action name="save_user" class="com.jcg.struts2.jsp.UserAction" method="saveUser" >
           <result name="success">views/addNewUser.jsp</result>
         </action>
-        <action name="loadEditUserDetails" class="com.jcg.struts2.jsp.UserAction" method="viewUserDetails" >
+        <action name="load_edit_user_details" class="com.jcg.struts2.jsp.UserAction" method="viewUserDetails" >
             <result name="success">views/editUserDetails.jsp</result>
         </action>
+        <action name="delete_user" class="com.jcg.struts2.jsp.UserAction" method="deleteUser" >
+            <result name="success">views/manageUsers.jsp</result>
+        </action>
+        <action name="edit_user" class="com.jcg.struts2.jsp.UserAction" method="updateUser" >
+            <result name="success">views/editUserDetails.jsp</result>
+        </action>
+
     </package>
 </struts>

@@ -19,11 +19,12 @@
 <h1>Add New User</h1>
 <br>
 <s:property value="message"/>
+<br>
 <s:form action="save_user">
     <s:textfield name="name" label="Name"/>
     <s:textfield name="username" label="Username"/>
     <s:textfield name="user_role" label="User Role"/>
-    <s:password name="userpass" label="Password"/>
+    <s:password name="password" label="Password"/>
     <s:submit value="Register"></s:submit>
 </s:form>
 

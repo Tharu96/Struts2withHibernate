@@ -8,12 +8,13 @@
 </head>
 <body>
 <h1>Struts2 Hello World Example</h1>
-<s:form action="loginprocess">
+
+<br> <s:property value="message"/> <br>
+<s:form action="login_process">
     <s:textfield name="username" label="Username"/>
-    <s:password name="userpass" label="Password"/>
+    <s:password name="password" label="Password"/>
     <s:submit value="login"></s:submit>
 </s:form>
 
-<a href="user_admin">User Admin</a>|
-</body>
+
 </html>
